@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Register to this Cool Site!</h1>
+    <a href="Login">Log In</a>
+    @* Form To Register *@
+     @model User
+     <form asp-action="Register" asp-controller="Home" method="post">
+        @* chef input *@
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName">First Name:</label>
+        <input type="text" asp-for="FirstName" id="">
+        <br>
+        <br>
+        @* dish input *@
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName">Last Name:</label>
+        <input type="text" asp-for="LastName"></input>
+        <br>
+        @* Calories input *@
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email">Email:</label>
+        <input type="email" asp-for="Email"></input>
+        <br>
+        @* Tastiness input *@
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password">Password:</label>
+        <input type="password" asp-for="Password"></input>
+        <br>
+        @* Description input *@
+        <span asp-validation-for="Confirm"></span>
+        <label asp-for="Confirm">Confirm Password:</label>
+        <input type="password" asp-for="Confirm"></input>
+        <br>
+
+        <button type="submit">Sign up Now</button>
+      
+       
+    </form>
+
+</div>
